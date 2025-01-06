@@ -1,62 +1,44 @@
-let nomeCompleto = "Gabriel Rodrigues dos Santos";
+const idade = 18;
 
-if (nomeCompleto.length >= 10) {
-    console.log("O nome possui pelo menos 10 caracteres!!");
+if (idade >= 18) {
+    console.log("Maior de idade!");
 } else {
-    console.log("O nome não possui nem 10 caracteres!");
+    console.log("Menor de idade!");
 }
 
-const primeiroValor = 1;
-const segundoValor = 22;
+const primeiroValor = 22;
+const segundoValor = 11;
+let maiorValor = 0;
 
 if (primeiroValor > segundoValor) {
-    console.log("O primeiro valor é maior que o segundo valor!");
+    maiorValor = primeiroValor;
 } else if (primeiroValor < segundoValor) {
-    console.log("O primeiro valor é menor que o segundo valor!");
+    maiorValor = segundoValor;
 } else {
-    console.log("O primeiro valor e o segundo valor são iguais!");
+    // ambos os valores são iguais
+    console.log(`${ primeiroValor } e ${ segundoValor } são iguais!`);
 }
 
-const idade = 17;
-const estaAcompanhado = true;
+if (maiorValor != 0) {
+    console.log("Maior valor: " + maiorValor);
+}
 
-if (idade >= 18 || estaAcompanhado) {
-    console.log("Pode entrar na festa!");
+const numero = 1;
+const numeroStrig = "1";
+
+/**
+ * o operador de comparação == compara somente o valor
+ */
+if (numero == numeroStrig) {
+    console.log(numero + " e " + numeroStrig + " são iguais!");
+}
+
+/**
+ * o operador === compara o valor e o tipo
+ * então "1" string não é igual a 1 number
+ */
+if (numero === numeroStrig) {
+    console.log(numero + " e " + numeroStrig + " são iguais!");
 } else {
-    console.log("Não pode entrar na festa!");
+    console.log(numero + " e " + numeroStrig + " não são iguais!");
 }
-
-const mesAtual = "Janeiro";
-
-if (mesAtual < 1 || mesAtual > 12) {
-    console.log("Mês inválido!");
-} else if (mesAtual == "Janeiro") {
-    console.log("Número do mês: " + 1);
-} else if (mesAtual == "Fevereiro") {
-    console.log("Mês atual: " + 2);
-} else {
-    console.log("Mês fora do intervalo!");
-}
-
-switch (mesAtual) {
-    case "Janeiro":
-        console.log("Número do mês: " + 1);
-        break;
-    case "Fevereiro":
-        console.log("Número do mês: " + 2);
-        break;
-    default:
-        console.log("Mês inválido!");
-}
-
-// operadores lógicos no javascript
-const primeiroNome = "Gabriel";
-const sobrenome = "";
-
-console.log(primeiroNome != "" && sobrenome != "");
-console.log(primeiroNome != "" || sobrenome != "");
-
-const teste = false;
-
-// negação
-console.log(!teste);
