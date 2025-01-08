@@ -42,3 +42,21 @@ if (numero === numeroStrig) {
 } else {
     console.log(numero + " e " + numeroStrig + " não são iguais!");
 }
+
+const mes = "Janeiro";
+let mesNumero = 0;
+
+switch (mes) {
+    case "Janeiro":
+        mesNumero = 1;
+        break;
+    case "Fevereiro":
+        mesNumero = 2;
+        break;
+    default: 
+        mesNumero = 0;
+        break;
+}
+
+console.log(mes);
+console.log(mesNumero);
