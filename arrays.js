@@ -83,3 +83,55 @@ console.log(numeros);
 numeros.splice(2, 1);
 
 console.log(numeros);
+
+// removendo o ultimo elemento do array
+const produtos = ['Banana', 'Refrigerante', 'Bola de futebol', 'Bala de morango'];
+
+console.log(produtos);
+produtos.pop(); // remover o ultimo elemento
+console.log(produtos);
+
+// remover o primeiro elemento do array
+produtos.shift();
+console.log(produtos);
+
+// matriz
+const numerosMatriz = [
+    [ 1, 2, 4, 5, 3, 12 ],
+    [ 1, 2, 1, 2, 3, 22 ],
+    [ 1, 2, 4 ]
+];
+
+for (let contador = 0; contador < numerosMatriz.length; contador++) {
+
+    for (let contadorInterno = 0; contadorInterno < numerosMatriz[ contador ].length; contadorInterno++) {
+        console.log('linha => ' + contador + " número => " + numerosMatriz[ contador ][ contadorInterno ]);
+    }
+
+}
+
+const nomes2 = ['Gabriel', 'Pedro', 'Gabriel', 'Maria', 'Fernando', 'Pedro', 'Gabriel', 'Maria', 'Eduardo'];
+const nomesJaforamContados = [];
+
+for (let contador = 0; contador < nomes2.length; contador++) {
+    const nomeAtualTestar = nomes2[ contador ];
+    let contadorVezesNomeApareceu = 0;
+
+    for (let contadorInterno = 0; contadorInterno < nomes2.length; contadorInterno++) {
+
+        if (!nomesJaforamContados.includes(nomeAtualTestar)) {
+            
+            if (nomes2[ contadorInterno ] == nomeAtualTestar) {
+                contadorVezesNomeApareceu++;
+            }
+
+        }
+
+    }
+    
+    if (!nomesJaforamContados.includes(nomeAtualTestar)) {
+        console.log(nomeAtualTestar + ' = ' + contadorVezesNomeApareceu);
+    }
+
+    nomesJaforamContados.push(nomeAtualTestar);
+}
